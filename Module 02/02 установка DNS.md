@@ -4,7 +4,7 @@
 
 Устанвока DNS
 ```
-gate:~# apt install bind9 -y
+node1:~# apt install bind9 -y
 
 ```
 Проверка сервиса
@@ -28,7 +28,7 @@ Cat /etc/bind/named.conf
                 8.8.8.8;
         };
        dnssec-validation no;
-       // listen-on { 192.168.10.1; 127.0.0.1; };
+       listen-on { 192.168.10.1; 127.0.0.1; };
        listen-on-v6 { ::; };
        
 
