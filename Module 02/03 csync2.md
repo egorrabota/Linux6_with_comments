@@ -34,7 +34,7 @@ nossl * *;
 
 group dns
 {
-        host node1.corp.local node2.corp.local;
+        host node1 node2;
        
         auto younger;  
 
