@@ -54,8 +54,8 @@ nslookup -1=A ya.ru 127.0.0.1
 ```
 nano /etc/resolv.conf
 ```
-Заменяем
 ```
+domain corp.ru
 nameserver 127.0.0.1
 ```
 
@@ -100,4 +100,13 @@ node1# ssn2 apt install bind9
 
 ```
 # rndc reload
+```
+
+node 2
+```
+nano /etc/resolv.conf
+```
+```
+domain corp.ru
+nameserver 127.0.0.1
 ```
