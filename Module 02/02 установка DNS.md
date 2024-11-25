@@ -77,8 +77,8 @@ nano /etc/bind/corp.ru
 ```
 ```
 $TTL      3h
-@         SOA     ns root.gate  1 1d 12h 1w 3h
-          NS      ns
+@         SOA     node1 root.node1  1 1d 12h 1w 3h
+          NS      node1
 
 ns        A       192.168.10.1
 ns        A       192.168.10.2
