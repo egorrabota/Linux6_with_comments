@@ -22,9 +22,6 @@ vrrp_instance VI_1 {
     virtual_ipaddress {
         192.168.10.254 label eth0:1 192.168.123.2/24 dev eth0
     }
-#    virtual_routes {
-#        0.0.0.0/0 via 192.168.123.2 dev eth0
-#    }
     notify_backup "/usr/local/bin/vrrp.sh BACKUP"
     notify_master "/usr/local/bin/vrrp.sh MASTER"
 }
