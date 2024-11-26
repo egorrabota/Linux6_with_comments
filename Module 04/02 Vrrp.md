@@ -72,3 +72,16 @@ vrrp_instance VI_1 {
     notify_master "/usr/local/bin/vrrp.sh MASTER"
 }
 ```
+
+Мониторинг
+
+```
+node1# systemctl stop keepalived
+```
+```
+node1# ip -brief address show
+```
+
+```
+node2# ip -brief address show
+```
