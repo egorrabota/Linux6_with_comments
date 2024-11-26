@@ -9,8 +9,8 @@ apt install ucarp
 nano /etc/network/interfaces
 ```
 ```
-auto eth0
-iface eth0 inet static
+auto eth1
+iface eth1 inet static
         address 192.168.10.1
         netmask 255.255.255.0
 
@@ -18,7 +18,7 @@ iface eth0 inet static
         ucarp-vip 192.168.10.254
         ucarp-password secret
 
-iface eth0:ucarp inet static
+iface eth1:ucarp inet static
         address 192.168.10.254
         netmask 255.255.255.255
 ```
@@ -50,8 +50,8 @@ apt install ucarp
 nano /etc/network/interfaces
 ```
 ```
-auto eth0
-iface eth0 inet static
+auto eth1
+iface eth1 inet static
         address 192.168.10.2
         netmask 255.255.255.0
 
@@ -59,7 +59,7 @@ iface eth0 inet static
         ucarp-vip 192.168.10.254
         ucarp-password secret
 
-iface eth0:ucarp inet static
+iface eth1:ucarp inet static
         address 192.168.10.254
         netmask 255.255.255.255
 ```
