@@ -14,11 +14,11 @@ nodeN# nano /etc/keepalived/keepalived.conf
 vrrp_instance VI_1 {
 
     state MASTER
-    interface eth0
+    interface eth1
 
     virtual_router_id 1
     virtual_ipaddress {
-        192.168.10.254/24 dev eth0 label eth0:1
+        192.168.10.254/24 label eth0:1
     }
     notify_backup "/usr/local/bin/vrrp.sh BACKUP"
     notify_master "/usr/local/bin/vrrp.sh MASTER"
@@ -32,11 +32,11 @@ nodeN# nano /etc/keepalived/keepalived.conf
 vrrp_instance VI_1 {
 
     state BACKUP
-    interface eth0
+    interface eth1
 
     virtual_router_id 1
     virtual_ipaddress {
-        192.168.10.254/24 dev eth0 label eth0:1
+        192.168.10.254/24 label eth0:1
     }
     notify_backup "/usr/local/bin/vrrp.sh BACKUP"
     notify_master "/usr/local/bin/vrrp.sh MASTER"
