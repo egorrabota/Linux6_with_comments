@@ -78,3 +78,11 @@ nodeN# chmod +x /usr/local/bin/vrrp.sh
 
 # ipvsadm -L -n -c
 ```
+
+
+> Целевое состояние:
+  -  Доступный vIP (виртуальный адрес) в соответствии с keepalived.conf
+  - `node1` keepalived - MASTER
+  - `node2` keepalived - BACKUP
+  - При отключении сетевого интерфейса на `node1` с консоли - `node2` переходит в MASTER и получает дефолтный маршрут в интернет.
+  - После обратного включения `node1` - `node2` теряет MASTER вместе с маршрутом в интернет.
