@@ -509,11 +509,32 @@ node2# umount /disk2
 node2# drbdadm secondary r0
 ```
 
+
+
 На обоих узлах останавливем службу
 
 ```
 root@nodeN:~# systemctl stop drbd.service
 ```
+
+```
+service heartbeat stop
+```
+```
+nano  /etc/ha.d/haresources
+```
+```
+node1.corp.ru drbddisk Filesystem::/dev/drbd0::/disk2::ext4
+```
+```
+service heartbeat start
+```
+```
+apt install psmisc
+systemctl stop drbd.service
+systemctl disable drbd.service
+```
+
 Настройка кластера
 ```
 crm configure
