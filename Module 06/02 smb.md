@@ -44,6 +44,10 @@ systemctl disable nmbd
 
 ```
 ```
+mkdir /disk2/samba
+```
+
+```
 # testparm
 ```
 
