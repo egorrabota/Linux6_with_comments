@@ -56,11 +56,11 @@ mkdir /disk2/samba
 crm configure
 ```
 ```
-crm(live)configure# primitive pr_srv_smbd systemd:smbd
+ primitive pr_srv_smbd systemd:smbd
 
-crm(live)configure# primitive pr_ip_smbd ocf:heartbeat:IPaddr2 params ip=192.168.10.20 cidr_netmask=32 nic=eth1
+ primitive pr_ip_smbd ocf:heartbeat:IPaddr2 params ip=192.168.10.20 cidr_netmask=32 nic=eth1
 
-crm(live)configure# group gr_ip_fs pr_fs_r0 pr_ip_smbd pr_srv_smbd
+ group gr_ip_fs pr_fs_r0 pr_ip_smbd pr_srv_smbd
 ```
 
 Тестирование
