@@ -60,7 +60,7 @@ address 192.168.10.1/24
 
 изменить имя компьютера
 ```
-hostnamectl set-hostname  node1
+hostnamectl set-hostname  node1.corp.ru
 
 ```
 Настройка hosts
@@ -115,7 +115,7 @@ address 192.168.10.2/24
 
 изменить имя компьютера
 ```
-hostnamectl set-hostname  node4
+hostnamectl set-hostname  node2.corp.ru
 
 ```
 Настройка hosts
